@@ -1,0 +1,2 @@
+# Discord-bot-town-word-chain
+Discord bot on Python to play towns word chain
