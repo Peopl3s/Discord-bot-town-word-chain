@@ -60,12 +60,12 @@ bot = discord.Client()
 async def on_message(message):
     if message.author == bot.user:
         return
-    
-    if message.content == '!refresh':
-        refresh()
-    else:
-        response = get_city(message.content)
-        await message.channel.send(response)
+    if message.content.startswith('!'):
+        if message.content == '!refresh':
+            refresh()
+        else:
+            response = get_city(message.content)
+            await message.channel.send(response)
 
 bot.run(TOKEN)
 
